@@ -14,10 +14,10 @@ function CardDetails({
 
   const likeProduct = (productId) => {
     fetch("https://myecshop.herokuapp.com/like", {
-      mode: cors,
       method: "POST",
       body: JSON.stringify({ productId: productId }),
       headers: { "Content-Type": "application/json" },
+      mode: "cors",
       credentials: "include",
     })
       .then((res) => res.json())
