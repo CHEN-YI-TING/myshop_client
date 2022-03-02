@@ -3,7 +3,7 @@
   to = "/index.html"
   status = 200
 
-[[headers]]
-  for = "/*"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
+[[redirects]]
+  from = "/api/dev/*"
+  to = "https://myecshop.herokuapp.com/:splat"
+  status = 200

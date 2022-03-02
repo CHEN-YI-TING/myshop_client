@@ -8,11 +8,11 @@ import { useNavigate } from "react-router-dom";
 function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
   const { admin, user, setUser, setAdmin } = useAuth();
-  const SERVER_API_URL = "https://myecshop.herokuapp.com";
+  const SERVER_API_URL = "/api/dev/";
   let navigate = useNavigate();
 
   const logout = () => {
-    fetch(`${SERVER_API_URL}/auth/logout`, {
+    fetch(`${SERVER_API_URL}auth/logout`, {
       mode: "cors",
       credentials: "include",
       headers: {

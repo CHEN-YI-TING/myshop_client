@@ -12,7 +12,7 @@ import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import InputAdornment from "@mui/material/InputAdornment";
 
 function Signup() {
-  const SERVER_API_URL = "https://myecshop.herokuapp.com";
+  const SERVER_API_URL = "/api/dev/";
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const usernameError = document.querySelector(".username.error");
@@ -29,7 +29,7 @@ function Signup() {
     e.preventDefault();
 
     try {
-      const res = await fetch(`${SERVER_API_URL}/auth/signup`, {
+      const res = await fetch(`${SERVER_API_URL}auth/signup`, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

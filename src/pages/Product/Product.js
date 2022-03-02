@@ -4,7 +4,7 @@ import CreateIcon from "@mui/icons-material/Create";
 import "./product.css";
 
 function Product() {
-  const SERVER_API_URL = "https://myecshop.herokuapp.com";
+  const SERVER_API_URL = "/api/dev/";
   const [productList, setProductList] = useState([]);
   const [editMode, setEditMode] = useState(false);
   const [createProduct, setCreateProduct] = useState({
@@ -22,7 +22,7 @@ function Product() {
   });
 
   useEffect(() => {
-    fetch(`${SERVER_API_URL}/products`, {
+    fetch(`${SERVER_API_URL}products`, {
       headers: { "Content-Type": "application/json" },
       mode: "cors",
       credentials: "include",
@@ -34,7 +34,7 @@ function Product() {
   }, []);
 
   const deleteProduct = (id) => {
-    fetch(`${SERVER_API_URL}/products/${id}`, {
+    fetch(`${SERVER_API_URL}products/${id}`, {
       method: "DELETE",
       body: JSON.stringify({ productId: id }),
       headers: { "Content-Type": "application/json" },
@@ -53,7 +53,7 @@ function Product() {
   const updateProduct = (e) => {
     e.preventDefault();
     const id = editProduct.id;
-    fetch(`${SERVER_API_URL}/products/${id}`, {
+    fetch(`${SERVER_API_URL}products/${id}`, {
       method: "PATCH",
       body: JSON.stringify(editProduct),
       headers: { "Content-Type": "application/json" },
@@ -72,7 +72,7 @@ function Product() {
 
   const addProduct = (e) => {
     e.preventDefault();
-    fetch(`${SERVER_API_URL}/products/new`, {
+    fetch(`${SERVER_API_URL}products/new`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(createProduct),

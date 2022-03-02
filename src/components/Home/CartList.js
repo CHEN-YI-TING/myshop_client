@@ -2,9 +2,9 @@ import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { CartListContext } from "../../contexts/CartListContext";
-import "./home.css";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import "./home.css";
 
 function CartList() {
   let navigate = useNavigate();

@@ -14,7 +14,7 @@ import GoogleButton from "react-google-button";
 import { useAuth } from "../../contexts/AuthContext";
 
 function Login() {
-  const SERVER_API_URL = "https://myecshop.herokuapp.com";
+  const SERVER_API_URL = "/api/dev/";
   //login state
   const { setUser, setAdmin } = useAuth();
   const [username, setUsername] = useState("");
@@ -35,7 +35,7 @@ function Login() {
     e.preventDefault();
 
     try {
-      fetch(`${SERVER_API_URL}/auth/login`, {
+      fetch(`${SERVER_API_URL}auth/login`, {
         method: "POST",
         mode: "cors",
         credentials: "include",
@@ -72,7 +72,7 @@ function Login() {
 
   const google = async () => {
     window.open(
-      `${SERVER_API_URL}/auth/google`,
+      `${SERVER_API_URL}auth/google`,
       "_blank",
       "width=500,height=600"
     );

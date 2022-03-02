@@ -5,9 +5,9 @@ import "./home.css";
 function ProductCard() {
   const [productObj, setProductObj] = useState([]);
   const [likedProducts, setLikedProducts] = useState([]);
-  const SERVER_API_URL = "https://myecshop.herokuapp.com";
+  const SERVER_API_URL = "/api/dev/";
   useEffect(() => {
-    fetch(`${SERVER_API_URL}/products`, {
+    fetch(`${SERVER_API_URL}products`, {
       headers: { "Content-Type": "application/json" },
       credentials: "include",
     })
