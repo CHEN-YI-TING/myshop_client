@@ -33,7 +33,7 @@ function Product() {
   }, []);
 
   const deleteProduct = (id) => {
-    fetch(`${SERVER_API_URL}/products/${id}`, {
+    fetch(`/api/dev/products/${id}`, {
       method: "DELETE",
       body: JSON.stringify({ productId: id }),
       headers: { "Content-Type": "application/json" },
