@@ -9,8 +9,8 @@ function Personal() {
   useEffect(() => {
     fetch("https://myecshop.herokuapp.com/auth/checkUser", {
       headers: { "Content-Type": "application/json" },
+      mode: "cors",
       credentials: "include",
-      mode: cors,
     })
       .then((res) => res.json())
       .then((data) => {

@@ -24,8 +24,8 @@ function Product() {
   useEffect(() => {
     fetch(`${SERVER_API_URL}/products`, {
       headers: { "Content-Type": "application/json" },
-      credentials: "include",
       mode: "cors",
+      credentials: "include",
     })
       .then((res) => res.json())
       .then(({ products }) => {
@@ -36,9 +36,9 @@ function Product() {
   const deleteProduct = (id) => {
     fetch(`${SERVER_API_URL}/products/${id}`, {
       method: "DELETE",
-      mode: "cors",
       body: JSON.stringify({ productId: id }),
       headers: { "Content-Type": "application/json" },
+      mode: "cors",
       credentials: "include",
     })
       .then((res) => {
@@ -55,9 +55,9 @@ function Product() {
     const id = editProduct.id;
     fetch(`${SERVER_API_URL}/products/${id}`, {
       method: "PATCH",
-      mode: "cors",
       body: JSON.stringify(editProduct),
       headers: { "Content-Type": "application/json" },
+      mode: "cors",
       credentials: "include",
     })
       .then((res) => {
@@ -74,9 +74,9 @@ function Product() {
     e.preventDefault();
     fetch(`${SERVER_API_URL}/products/new`, {
       method: "POST",
-      mode: "cors",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(createProduct),
+      mode: "cors",
       credentials: "include",
     })
       .then((res) => res.json())

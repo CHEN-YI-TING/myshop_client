@@ -20,8 +20,8 @@ function CheckoutStripe() {
           allPrice: totalPrice,
         }),
         headers: { "Content-Type": "application/json" },
+        mode: "cors",
         credentials: "include",
-        mode: cors,
       })
         .then((res) => res.json())
         .then((data) => {

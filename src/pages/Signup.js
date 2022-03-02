@@ -31,8 +31,6 @@ function Signup() {
     try {
       const res = await fetch(`${SERVER_API_URL}/auth/signup`, {
         method: "POST",
-        credentials: "include",
-        mode: "cors",
         headers: {
           "Content-type": "application/json",
         },
@@ -41,6 +39,8 @@ function Signup() {
           email: email,
           password: password,
         }),
+        mode: "cors",
+        credentials: "include",
       });
 
       const data = await res.json();
