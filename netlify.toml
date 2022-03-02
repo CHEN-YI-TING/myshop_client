@@ -5,6 +5,6 @@
 
 [[redirects]]
   from = "/api/dev/*"
-  to = "https://myecshop.herokuapp.com/:splat"
+  to = "/https://myecshop.herokuapp.com/:splat"
   status = 200
   force = true
