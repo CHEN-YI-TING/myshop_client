@@ -11,9 +11,8 @@ function CardDetails({
   setLikedProducts,
 }) {
   const { addCart } = useContext(CartListContext);
-  const SERVER_API_URL = "/api/dev/";
   const likeProduct = (productId) => {
-    fetch(`${SERVER_API_URL}like`, {
+    fetch("/api/dev/like", {
       method: "POST",
       body: JSON.stringify({ productId: productId }),
       headers: { "Content-Type": "application/json" },

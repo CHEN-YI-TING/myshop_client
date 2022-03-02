@@ -4,7 +4,6 @@ import { CartListContext } from "../../contexts/CartListContext";
 import "./checkout.css";
 
 function CheckoutStripe() {
-  const SERVER_API_URL = "/api/dev/";
   const { cartList, totalPrice } = useContext(CartListContext);
   const stripe = useStripe();
   const [email, setEmail] = useState("");
@@ -13,7 +12,7 @@ function CheckoutStripe() {
     if (cartList == [] || totalPrice === 0) {
       alert("購物車裡沒有產品.....");
     } else {
-      fetch(`${SERVER_API_URL}order`, {
+      fetch("/api/dev/order", {
         method: "POST",
         body: JSON.stringify({
           orderArray: cartList,
@@ -48,7 +47,7 @@ function CheckoutStripe() {
       };
     });
 
-    await fetch(`${SERVER_API_URL}checkout`, {
+    await fetch("/api/dev/checkout", {
       method: "POST",
       body: JSON.stringify({
         line_items: line_items,

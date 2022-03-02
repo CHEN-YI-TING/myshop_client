@@ -6,9 +6,8 @@ export const AuthContext = createContext(null);
 export function AuthProvider(props) {
   const [user, setUser] = useState(false);
   const [admin, setAdmin] = useState(false);
-  const SERVER_API_URL = "/api/dev/";
   useEffect(() => {
-    fetch(`${SERVER_API_URL}auth/checkUser`, {
+    fetch("/api/dev/auth/checkUser", {
       headers: { "Content-Type": "application/json" },
       mode: "cors",
       credentials: "include",

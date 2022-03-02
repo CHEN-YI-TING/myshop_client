@@ -3,10 +3,9 @@ import "./login.css";
 import { useAuth } from "../../contexts/AuthContext";
 
 function LoginSuccess() {
-  const SERVER_API_URL = "/api/dev/";
   const { setUser } = useAuth();
   useEffect(() => {
-    fetch(`${SERVER_API_URL}auth/user`, {
+    fetch("/api/dev/auth/user", {
       mode: "cors",
       credentials: "include",
       headers: {

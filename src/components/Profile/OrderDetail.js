@@ -5,9 +5,9 @@ import "./profile.css";
 function OrderDetail() {
   const [detail, setDetail] = useState([]);
   const { id } = useParams();
-  const SERVER_API_URL = "/api/dev/";
+
   useEffect(() => {
-    let url = `${SERVER_API_URL}order/details/${id}`;
+    let url = `/api/dev/order/details/${id}`;
     fetch(url, {
       headers: { "Content-Type": "application/json" },
       credentials: "include",

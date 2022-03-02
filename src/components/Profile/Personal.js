@@ -7,7 +7,7 @@ function Personal() {
   let navigate = useNavigate();
   const SERVER_API_URL = "/api/dev/";
   useEffect(() => {
-    fetch(`${SERVER_API_URL}auth/checkUser`, {
+    fetch("/api/dev/auth/checkUser", {
       headers: { "Content-Type": "application/json" },
       mode: "cors",
       credentials: "include",
