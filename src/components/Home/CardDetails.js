@@ -11,9 +11,9 @@ function CardDetails({
   setLikedProducts,
 }) {
   const { addCart } = useContext(CartListContext);
-
+  const SERVER_API_URL = "/api";
   const likeProduct = (productId) => {
-    fetch("https://myecshop.herokuapp.com/like", {
+    fetch(`${SERVER_API_URL}/like`, {
       method: "POST",
       body: JSON.stringify({ productId: productId }),
       headers: { "Content-Type": "application/json" },

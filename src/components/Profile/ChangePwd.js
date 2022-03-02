@@ -6,9 +6,10 @@ function ChangePwd() {
   const [oldPwd, setOldPwd] = useState("");
   const newSuc = document.querySelector(".newSuc");
   const oldErr = document.querySelector(".oldErr");
+  const SERVER_API_URL = "/api";
   const editPassword = async (e) => {
     e.preventDefault();
-    fetch("https://myecshop.herokuapp.com/auth/changePwd", {
+    fetch(`${SERVER_API_URL}/auth/changePwd`, {
       mode: "cors",
       method: "PATCH",
       body: JSON.stringify({ oldPassword: oldPwd, password: newPwd }),

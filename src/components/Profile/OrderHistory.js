@@ -44,10 +44,10 @@ function OrderHistory() {
   const changePage = ({ selected }) => {
     setPageNumber(selected);
   };
-
+  const SERVER_API_URL = "/api";
   let navigate = useNavigate();
   useEffect(() => {
-    fetch("https://myecshop.herokuapp.com/order/orders", {
+    fetch(`${SERVER_API_URL}/order/orders`, {
       headers: { "Content-Type": "application/json" },
       credentials: "include",
     })

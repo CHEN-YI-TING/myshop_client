@@ -4,7 +4,7 @@ import { CartListContext } from "../../contexts/CartListContext";
 import "./checkout.css";
 
 function CheckoutStripe() {
-  const SERVER_API_URL = "https://myecshop.herokuapp.com";
+  const SERVER_API_URL = "/api";
   const { cartList, totalPrice } = useContext(CartListContext);
   const stripe = useStripe();
   const [email, setEmail] = useState("");

@@ -5,8 +5,9 @@ import "./profile.css";
 function OrderDetail() {
   const [detail, setDetail] = useState([]);
   const { id } = useParams();
+  const SERVER_API_URL = "/api";
   useEffect(() => {
-    let url = `https://myecshop.herokuapp.com/order/details/${id}`;
+    let url = `${SERVER_API_URL}/order/details/${id}`;
     fetch(url, {
       headers: { "Content-Type": "application/json" },
       credentials: "include",
