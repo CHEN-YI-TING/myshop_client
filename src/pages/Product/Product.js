@@ -4,7 +4,7 @@ import CreateIcon from "@mui/icons-material/Create";
 import "./product.css";
 
 function Product() {
-  const SERVER_API_URL = "/api";
+  const SERVER_API_URL = "https://myecshop.herokuapp.com";
   const [productList, setProductList] = useState([]);
   const [editMode, setEditMode] = useState(false);
   const [createProduct, setCreateProduct] = useState({

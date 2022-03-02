@@ -14,7 +14,7 @@ import GoogleButton from "react-google-button";
 import { useAuth } from "../../contexts/AuthContext";
 
 function Login() {
-  const SERVER_API_URL = "/api";
+  const SERVER_API_URL = "https://myecshop.herokuapp.com";
   //login state
   const { setUser, setAdmin } = useAuth();
   const [username, setUsername] = useState("");

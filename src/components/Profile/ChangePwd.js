@@ -6,7 +6,7 @@ function ChangePwd() {
   const [oldPwd, setOldPwd] = useState("");
   const newSuc = document.querySelector(".newSuc");
   const oldErr = document.querySelector(".oldErr");
-  const SERVER_API_URL = "/api";
+  const SERVER_API_URL = "https://myecshop.herokuapp.com";
   const editPassword = async (e) => {
     e.preventDefault();
     fetch(`${SERVER_API_URL}/auth/changePwd`, {

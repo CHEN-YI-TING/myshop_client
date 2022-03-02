@@ -6,7 +6,7 @@ export const AuthContext = createContext(null);
 export function AuthProvider(props) {
   const [user, setUser] = useState(false);
   const [admin, setAdmin] = useState(false);
-  const SERVER_API_URL = "/api";
+  const SERVER_API_URL = "https://myecshop.herokuapp.com";
   useEffect(() => {
     fetch(`${SERVER_API_URL}/auth/checkUser`, {
       headers: { "Content-Type": "application/json" },

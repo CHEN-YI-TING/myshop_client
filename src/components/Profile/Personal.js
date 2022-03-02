@@ -5,7 +5,7 @@ import "./profile.css";
 function Personal() {
   const [userObj, setUserObj] = useState({});
   let navigate = useNavigate();
-  const SERVER_API_URL = "/api";
+  const SERVER_API_URL = "https://myecshop.herokuapp.com";
   useEffect(() => {
     fetch(`${SERVER_API_URL}/auth/checkUser`, {
       headers: { "Content-Type": "application/json" },
